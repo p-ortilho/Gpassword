@@ -55,3 +55,20 @@ def doze():
     senha = str(senha).strip("[]").replace(",", "").replace("'", "").replace(" ", "")
 
     return senha
+
+def word():
+    senha = []
+
+    with open("wordlist.txt", "r") as arquivo:
+        wordlist = arquivo.readlines()
+
+        while len(senha) <= 5:
+            palavra = random.choice(wordlist)
+            senha.append(palavra)
+
+        for item in range(len(senha)):
+            senha[item] = senha[item].replace("\n", "")
+        
+        senha = str(senha).replace("'", "").replace("[", "").replace("]", "").lower().replace(" ", " - ").replace(",", "")
+        senha_copia = senha.replace(" ", "").replace("-", "")
+    return f"\nPalavras da sua senha\n\n\t{senha}\n\nSenha para copia: {senha_copia}\n"

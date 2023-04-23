@@ -1,11 +1,11 @@
 from art import *
-import main
+import script
 
 tprint("Gpassword")
 
-print("Gpassword gera senhas de alto nível de segurança contendo letras, numeros e simbolos especiais.\n")
+print("Gpassword gera senhas de alto nível de segurança contendo letras, numeros, simbolos especiais e palavras.\n")
 
-print("1. Senhas com 8 caracteres\n2. Senhas com 12 caracteres\n99. Para sair\n")
+print("1. Senhas com 8 caracteres\n2. Senhas com 12 caracteres\n3. Senhas com palavras\n99. Para sair\n")
 
 senha_gerada = False
 while senha_gerada == False:
@@ -13,11 +13,14 @@ while senha_gerada == False:
     escolha = int(input("Escolha uma das opões: "))
 
     if escolha == 1:
-        senha = main.oito()
+        senha = script.oito()
         print(f"{senha}")
     elif escolha == 2:
-        senha = main.doze()
+        senha = script.doze()
         print(f"{senha}")
+    elif escolha == 3:
+         senha = script.word()
+         print(f"{senha}")
     elif escolha == 99:
         print("Você saiu!")
         exit()  
