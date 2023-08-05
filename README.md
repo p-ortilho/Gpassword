@@ -1,6 +1,6 @@
 # Gpassword
 
-Esse programa gera senhas de 8 e 12 caracteres contendo números, letras e símbolos especiais, além de gerar senhas com palavras.
+Script feito em python para gerar senhas, ele tem a opção de senhas com palavras e gerar uma senha aleatória com letras, numero e caracteres especiais.
 
 ## Instalação
 
@@ -16,7 +16,7 @@ Instale usando o python
 ```
 3. Para executar o script
 ```
-  python gpassword.py
+  python main.py
 ```
 
     
